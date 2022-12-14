@@ -17,12 +17,7 @@ public class DepositCalculator {
     }
 
     void calcInvestmentResult() {
-        double resultDepositAmount = 0; //Переменную лучше объявлять ближе к области её использования
-
-        //лишние переносы
-
         Scanner scanner = new Scanner(System.in);
-
 
         System.out.println("Введите сумму вклада в рублях:");
         int amount = scanner.nextInt();
@@ -32,6 +27,8 @@ public class DepositCalculator {
 
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
         int action = scanner.nextInt();
+
+        double resultDepositAmount = 0;
 
         if (action == 1) {
             resultDepositAmount = calculateSimplePercent(amount, 0.06, period);
